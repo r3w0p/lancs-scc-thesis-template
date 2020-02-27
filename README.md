@@ -1,4 +1,9 @@
 lancs-scc-thesis-template
 
-- Edit the files in `preamble`, `chapters`, etc.
-- Run `main.tex`
+- Edit files in `preamble`
+- Add chapters to `chapters/main.tex`
+- Add appendices to `appendices/main.tex`
+- Add references to `bib/references.bib`
+
+See `main.pdf` for example output
+
