@@ -1,0 +1,53 @@
+\documentclass[main.tex]{lancscsthesis}
+
+% LaTeX packages
+\input{preamble/packages}
+
+% Macros 
+\input{preamble/macros}
+
+% Thesis metadata
+\input{preamble/thesis-details}
+
+% Include bib files
+\input{preamble/bib-setup}
+
+
+\begin{document}
+
+% Title page
+\maketitle[logo-first]
+
+% Thesis dedication
+\input{chapters/dedication}
+
+% Acknowledgements
+\input{chapters/acknowledgements}
+
+% Declaration
+\input{chapters/declaration}
+
+% Related publications
+\input{chapters/publications}
+
+% The abstract
+\input{chapters/abstract}
+
+% Prints out lists of contents, figures, tables
+\thesisLists
+
+% Tells the template that the thesis body will start
+\thesisBodyStart
+
+% Include the chapters
+\input{chapters/main}
+
+% Include the references
+\printReferences
+
+% Include the appendices
+\begin{appendices}
+    \input{appendices/code}
+\end{appendices}
+
+\end{document}

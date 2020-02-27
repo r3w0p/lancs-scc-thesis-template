@@ -1,0 +1,46 @@
+\chapter{Introduction}
+\label{chap:intro}
+
+In this chapter...
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/my_figure.jpg}
+    \caption{My figure.}
+    \label{fig:my_figure}
+\end{figure}
+
+
+% https://ctan.org/pkg/algorithmicx
+\begin{algorithm}
+    \caption{An infinite loop.}
+    \label{alg:infinite_loop}
+    \begin{algorithmic}
+        \While{True}
+        \State Nothing
+        \EndWhile
+    \end{algorithmic}
+\end{algorithm}
+
+
+\begin{table}
+    \caption{My table.}
+    \label{tab:my_table}
+    \begin{tabularx}{\linewidth}{X|X}
+        \textit{Column 1} & \textit{Column 2} \\ \hline
+        Cell 1 & Cell 2 \\ \hlinegray
+        Cell 3 & Cell 4
+    \end{tabularx}
+\end{table}
+
+
+\begin{sidewaystable}
+    \caption{My table... sideways.}
+    \label{tab:my_table_sideways}
+    \begin{tabularx}{\linewidth}{X|X}
+        \textit{Column 1} & \textit{Column 2} \\ \hline
+        Cell 1 & Cell 2 \\ \hlinegray
+        Cell 3 & Cell 4
+    \end{tabularx}
+\end{sidewaystable}
+

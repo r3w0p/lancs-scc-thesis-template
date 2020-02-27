@@ -1,0 +1,52 @@
+% Prints the month and year, as used on the title page
+% From: https://tex.stackexchange.com/a/312603/166626
+\newcommand*{\printmonthyear}{%
+   \ifcase \month\or January\or February\or March\or April\or May\or June\or July\or
+    August\or September\or October\or November\or December\fi \space \number\year}
+
+
+% \texttildemid produces a centred tilde ~
+% From: https://tex.stackexchange.com/a/377
+\newcommand{\texttildemid}{\raisebox{0.5ex}{\texttildelow}}
+
+% Y can be used to centre cells in a tabularx environment
+% From: https://tex.stackexchange.com/a/89932/166626
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+
+% Left, centred, and right cells that have a defined width
+% From: https://tex.stackexchange.com/a/12712
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+
+% Provides basic styling for code listings
+% From: https://tex.stackexchange.com/a/83883/166626
+\definecolor{codered}{rgb}{0.7,0,0}
+\definecolor{codegreen}{rgb}{0,0.5,0}
+\definecolor{codeblue}{rgb}{0,0,0.8}
+
+\newcommand\codestyle{\lstset{
+    showspaces=false,
+    showstringspaces=false,
+    numbers=left,
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\ttfamily\footnotesize\color{codeblue},
+    stringstyle=\ttfamily\footnotesize\color{codered},
+    commentstyle=\ttfamily\footnotesize\color{codegreen},
+    numberstyle=\ttfamily\footnotesize
+}}
+
+\newcommand\codeexternal[2][]{{
+    \codestyle
+    \lstinputlisting[#1]{#2}
+}}
+
+
+% Provides tables with a gray horizontal line that makes tables easier to read
+% \hlinegray for the entire row
+% \clinegray for specific cells in the row
+\newcommand\hlinegray{\arrayrulecolor{gray}\hline\arrayrulecolor{black}}
+\newcommand\clinegray[1]{\arrayrulecolor{gray}\cline{#1}\arrayrulecolor{black}}
+
