@@ -1,4 +1,8 @@
-lancs-scc-thesis-template
+# Lancaster University Thesis Template
+
+School of Computing and Communications
+
+## How to Use
 
 - Edit files in `preamble`
 - Add chapters to `chapters/main.tex`
@@ -6,4 +10,3 @@ lancs-scc-thesis-template
 - Add references to `bib/references.bib`
 
 See `main.pdf` for example output
-
